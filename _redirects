@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://headlessdev.netlify.com/* https://blog.headlessdev.com/:splat 301!
