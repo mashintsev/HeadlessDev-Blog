@@ -4,3 +4,7 @@
 [build.environment]
   YARN_VERSION = "1.3.2"
   YARN_FLAGS = "--no-ignore-optional"
+[[redirects]]
+  from = "https://headlessdev.netlify.com/*"
+  to = "https://blog.headlessdev.com/:splat"
+  status = 301
