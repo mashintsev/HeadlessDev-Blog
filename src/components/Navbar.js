@@ -18,8 +18,8 @@ const Navbar = () => (
         <Link className="navbar-item" to="/">
           Home
         </Link>
-        <Link className="navbar-item" to="/atlassian">
-          Atlassian Open-Source Projects
+        <Link className="navbar-item" to="/atlassian-projects">
+          Atlassian Projects
         </Link>
       </div>
       <div className="navbar-end">
