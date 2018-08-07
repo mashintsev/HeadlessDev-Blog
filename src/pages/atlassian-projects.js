@@ -7,6 +7,7 @@ import PageHeader from '@atlaskit/page-header';
 
 const Wrapper = styled.div`
   width: 850px;
+  min-width: 850px;
   margin: 0 auto;
   padding: 0 18px;
 `;
