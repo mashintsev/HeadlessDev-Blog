@@ -6,16 +6,12 @@ import Page from '@atlaskit/page'
 import PageHeader from '@atlaskit/page-header';
 
 const Wrapper = styled.div`
-  width: 800px;
+  width: 850px;
   margin: 0 auto;
-`;
-
-const TimeCell = styled.div`
-  width: 160px;
+  padding: 0 18px;
 `;
 
 const DescriptionCell = styled.div`
-  width: 300px;
   text-overflow: ellipsis;
   overflow: hidden;
 `;
@@ -25,7 +21,17 @@ export default ({ data }) => (
         <Wrapper>
             <PageHeader>Latest updated Atlassian repositories on Bitbucket.org</PageHeader>
             <DynamicTable
-                defaultSortKey={'updated_on'}
+                // defaultSortKey='updated_on'
+                // defaultSortOrder='ASC'
+                isFixedSize
+                head={{
+                    cells: [
+                        { key: 'name', content: 'Name', isSortable: false, width: 35 },
+                        { key: 'language', content: 'Language', isSortable: false, },
+                        { key: 'updated_on', content: 'Updated', isSortable: false, width: 20, },
+                        { key: 'description', content: 'Description', isSortable: false, width: 30, },
+                    ]
+                }}
                 rows={data.allAtlasRepos.edges.filter(repo => repo.node.id !== 'dummy').map((repo, index) => ({
                     key: `row-${index}-${repo.node.id}`,
                     cells: [
@@ -47,7 +53,7 @@ export default ({ data }) => (
                         },
                         {
                             key: 'updated_on',
-                            content: <TimeCell>{moment(repo.node.updated_on).fromNow()}</TimeCell>,
+                            content: moment(repo.node.updated_on).fromNow(),
                         },
                         {
                             key: 'description',
