@@ -1,6 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: 'The HeadlessDev Blog',
+        siteUrl: `https://blog.headlessdev.com`,
     },
     plugins: [
         'gatsby-plugin-react-helmet',
@@ -93,6 +94,9 @@ module.exports = {
             options: {
                 modulePath: `${__dirname}/src/cms/cms.js`,
             },
+        },
+        {
+            resolve: `gatsby-plugin-sitemap`
         },
         'gatsby-plugin-netlify', // make sure to keep it last in the array
     ],
