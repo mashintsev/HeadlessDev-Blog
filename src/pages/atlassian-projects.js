@@ -4,6 +4,7 @@ import moment from 'moment';
 import DynamicTable from '@atlaskit/dynamic-table';
 import Page from '@atlaskit/page'
 import PageHeader from '@atlaskit/page-header';
+import Helmet from 'react-helmet';
 
 const Wrapper = styled.div`
   width: 850px;
@@ -19,6 +20,9 @@ const DescriptionCell = styled.div`
 
 export default ({ data }) => (
     <Page>
+        <Helmet>
+            <title>Atlassian Projects</title>
+        </Helmet>
         <Wrapper>
             <PageHeader>Latest updated Atlassian repositories on Bitbucket.org</PageHeader>
             <DynamicTable
