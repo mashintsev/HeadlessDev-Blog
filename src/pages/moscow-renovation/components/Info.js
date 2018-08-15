@@ -4,6 +4,9 @@ export default class Info extends PureComponent {
 
     render() {
         const { info } = this.props;
+        if (!info) {
+            return <div />;
+        }
         return (
             <div>
                 <div>{info.address}</div>
