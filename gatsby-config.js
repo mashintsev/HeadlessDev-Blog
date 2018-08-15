@@ -73,12 +73,25 @@ module.exports = {
 
                 // Optionally include some output when building
                 // Default is false
-                verboseOutput: true, // For debugging purposes
+                verboseOutput: false, // For debugging purposes
 
                 // Optionally skip creating nodes in graphQL.  Use this if you only want
                 // The data to be saved locally
                 // Default is false
                 // skipCreateNode: true, // skip import to graphQL, only use if localSave is all you want
+            }
+        },
+        {
+            resolve: 'gatsby-source-apiserver',
+            options: {
+                typePrefix: 'stroi_mos__',
+                url: `https://stroi.mos.ru/api/construction?search=&adm_unit=&func_type%5B%5D=renov-bld&func_type%5B%5D=renov-1719&func_type%5B%5D=renov-2023&finish_year=2025`,
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                name: `renovation`,
+                auth: null,
             }
         },
         'gatsby-plugin-sharp',
