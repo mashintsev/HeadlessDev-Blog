@@ -85,7 +85,7 @@ class MoscowRenovation extends React.Component {
                     <PageHeader>Стартовые площадки реновации в Москве</PageHeader>
                     <MapGL
                         {...this.state.viewport}
-                        mapStyle={'mapbox://styles/mapbox/streets-v9'}
+                        mapStyle={'mapbox://styles/mapbox/streets-v9?optimize=true'}
                         onViewportChange={this._updateViewport}
                         mapboxApiAccessToken={'pk.eyJ1IjoibWFzaGludHNldiIsImEiOiJjamtpM3VobGUwYnQxM3BwaDRqeWh3bnJ1In0.SoGp8UVhutW2fNZ-gCzMAg'}
                     >

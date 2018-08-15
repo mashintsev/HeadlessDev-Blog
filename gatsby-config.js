@@ -4,6 +4,7 @@ module.exports = {
         siteUrl: `https://blog.headlessdev.com`,
     },
     plugins: [
+        'gatsby-plugin-styled-components',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sass',
         {
