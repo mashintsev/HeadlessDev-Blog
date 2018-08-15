@@ -80,6 +80,7 @@ class MoscowRenovation extends React.Component {
             <Page>
                 <Helmet>
                     <title>Стартовые площадки</title>
+                    <meta name="description" content="Карта со стартовыми объектам для реновации в Москве" />
                 </Helmet>
                 <Wrapper>
                     <PageHeader>Стартовые площадки реновации в Москве</PageHeader>

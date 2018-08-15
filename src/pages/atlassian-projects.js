@@ -22,6 +22,7 @@ export default ({ data }) => (
     <Page>
         <Helmet>
             <title>Atlassian Projects</title>
+            <meta name="description" content="Latest updated Atlassian repositories on Bitbucket.org" />
         </Helmet>
         <Wrapper>
             <PageHeader>Latest updated Atlassian repositories on Bitbucket.org</PageHeader>
