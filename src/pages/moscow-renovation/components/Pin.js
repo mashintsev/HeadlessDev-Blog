@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import building from '../../img/building.svg'
+import building from '../../../img/building.svg'
 
 const pinStyle = {
     cursor: 'pointer',

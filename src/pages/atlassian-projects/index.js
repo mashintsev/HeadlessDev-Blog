@@ -1,10 +1,10 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import moment from 'moment';
 import DynamicTable from '@atlaskit/dynamic-table';
 import Page from '@atlaskit/page'
 import PageHeader from '@atlaskit/page-header';
-import Helmet from 'react-helmet';
 
 const Wrapper = styled.div`
   width: 850px;

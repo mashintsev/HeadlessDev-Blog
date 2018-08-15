@@ -6,8 +6,8 @@ import styled from 'styled-components';
 import Page from '@atlaskit/page'
 import PageHeader from '@atlaskit/page-header';
 import MapGL, { Marker, NavigationControl, Popup } from 'react-map-gl';
-import Pin from '../components/moscow-renovation/Pin';
-import Info from '../components/moscow-renovation/Info';
+import Pin from './components/Pin';
+import Info from './components/Info';
 
 const Wrapper = styled.div`
   width: 1200px;
@@ -23,7 +23,7 @@ const navStyle = {
     padding: '10px'
 };
 
-class MoscowRenovation extends React.Component {
+class Index extends React.Component {
     state = {
         viewport: {
             width: 1200,
@@ -105,7 +105,7 @@ class MoscowRenovation extends React.Component {
     }
 }
 
-export default MoscowRenovation
+export default Index
 
 
 export const query = graphql`
