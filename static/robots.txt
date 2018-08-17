@@ -1,7 +1,6 @@
 User-agent: *
-Disallow: /admin/
-
-User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /admin/
 
 Sitemap: https://blog.headlessdev.com/sitemap.xml
