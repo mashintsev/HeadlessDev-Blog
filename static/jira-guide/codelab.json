@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "source": "146Tf7dOcCyF9Nd7xisOVl27lvwpqSVu41Wg8ShtCWPg",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2018-08-22T10:13:26Z",
+  "id": "your-first-pwapp",
+  "duration": 0,
+  "title": "The Intuitive Jira Guide For Users",
+  "summary": "Jira is a self-hosted project management tool developed by Atlassian. It may seem a little daunting at first, compared to products like Trello or Asana, it comes with a lot more power and functionality packed in. But don't worry, Jira is actually a very intuitive tool. That's something you will discover while running through this guide for Jira.",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "atlassian",
+    "jira"
+  ],
+  "url": "your-first-pwapp"
+}
