@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: DevDigest for 29 August. Избранные статьи для разработчиков
+title: DevDigest for August 29
 date: '2018-08-29T18:19:44+03:00'
 description: |-
   Как айтишнику найти работу в США и ЕС: 9 лучших ресурсов.
