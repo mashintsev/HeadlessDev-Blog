@@ -2,14 +2,23 @@
 templateKey: blog-post
 title: DevDigest for August 30
 date: '2018-08-30T11:30:00+03:00'
-description: |-
-  
+description: >-
+  Overview of Mozilla's Data Pipeline.
+
+  What’s a Data Stack?
+
+  How to Architect the Perfect Data Warehouse.
+
+  10 Common Software Architectural Patterns in a Nutshell.
+
+  GPS/Cellular Asset Tracking using Google Cloud IoT Core, Firestore and
+  MongooseOS.
 tags:
   - DevDigest
 ---
-Today DevDigest is Data-Driven. // Сегодня DevDigest про работу с данными.
+Today DevDigest is Data-Driven.
 
-Articles // Статьи:
+Сегодня DevDigest про работу с данными.
 
 * [Overview of Mozilla's Data Pipeline](https://docs.telemetry.mozilla.org/concepts/pipeline/data_pipeline.html?utm_campaign=Revue%20newsletter&utm_medium=Newsletter&utm_source=SF%20Data%20Weekly/?ref=blog.headlessdev.com)
 
