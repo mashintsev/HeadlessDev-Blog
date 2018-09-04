@@ -86,6 +86,20 @@ module.exports = {
         {
             resolve: 'gatsby-source-apiserver',
             options: {
+                typePrefix: 'atlas__',
+                url: `https://api.bitbucket.org/2.0/repositories/atlassianlabs?sort=-updated_on&pagelen=100`,
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                name: `labsRepos`,
+                auth: null,
+                payloadKey: `values`,
+            }
+        },
+        {
+            resolve: 'gatsby-source-apiserver',
+            options: {
                 typePrefix: 'stroi_mos__',
                 url: `https://stroi.mos.ru/api/construction?search=&adm_unit=&func_type%5B%5D=renov-bld&func_type%5B%5D=renov-1719&func_type%5B%5D=renov-2023&finish_year=2025`,
                 method: 'get',

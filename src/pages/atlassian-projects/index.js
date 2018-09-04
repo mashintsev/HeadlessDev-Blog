@@ -38,7 +38,7 @@ export default ({ data }) => (
                         { key: 'description', content: 'Description', isSortable: false, width: 30, },
                     ]
                 }}
-                rows={data.allAtlasRepos.edges.filter(repo => repo.node.id !== 'dummy').map((repo, index) => ({
+                rows={[...data.allAtlasRepos.edges, ...data.allAtlasLabsRepos.edges].filter(repo => repo.node.id !== 'dummy').map((repo, index) => ({
                     key: `row-${index}-${repo.node.id}`,
                     cells: [
                         {
@@ -73,8 +73,8 @@ export default ({ data }) => (
 );
 
 export const query = graphql`
-   query AltasReposQuery{
-       allAtlasRepos {
+   query AltasReposQuery {
+      allAtlasLabsRepos {
         edges {
           node {
             id
@@ -87,5 +87,18 @@ export const query = graphql`
           }
         }
       }
-  }
+      allAtlasRepos {
+        edges {
+          node {
+            id
+            name
+            full_name
+            language
+            website
+            description
+            updated_on
+          }
+        }
+      }
+    }
 `;
