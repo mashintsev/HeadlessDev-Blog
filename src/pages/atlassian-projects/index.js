@@ -38,35 +38,38 @@ export default ({ data }) => (
                         { key: 'description', content: 'Description', isSortable: false, width: 30, },
                     ]
                 }}
-                rows={[...data.allAtlasRepos.edges, ...data.allAtlasLabsRepos.edges].filter(repo => repo.node.id !== 'dummy').map((repo, index) => ({
-                    key: `row-${index}-${repo.node.id}`,
-                    cells: [
-                        {
-                            key: 'name',
-                            content: (
-                                <a
-                                    href={`https://bitbucket.org/${repo.node.full_name}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {repo.node.name}
-                                </a>
-                            ),
-                        },
-                        {
-                            key: 'language',
-                            content: repo.node.language,
-                        },
-                        {
-                            key: 'updated_on',
-                            content: moment(repo.node.updated_on).fromNow(),
-                        },
-                        {
-                            key: 'description',
-                            content: <DescriptionCell>{repo.node.description}</DescriptionCell>,
-                        },
-                    ],
-                }))}
+                rows={[...data.allAtlasRepos.edges, ...data.allAtlasLabsRepos.edges]
+                    .filter(repo => repo.node.id !== 'dummy')
+                    .sort((a, b) => -(moment(a.node.updated_on).toDate() - moment(b.node.updated_on).toDate()))
+                    .map((repo, index) => ({
+                        key: `row-${index}-${repo.node.id}`,
+                        cells: [
+                            {
+                                key: 'name',
+                                content: (
+                                    <a
+                                        href={`https://bitbucket.org/${repo.node.full_name}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {repo.node.full_name}
+                                    </a>
+                                ),
+                            },
+                            {
+                                key: 'language',
+                                content: repo.node.language,
+                            },
+                            {
+                                key: 'updated_on',
+                                content: moment(repo.node.updated_on).fromNow(),
+                            },
+                            {
+                                key: 'description',
+                                content: <DescriptionCell>{repo.node.description}</DescriptionCell>,
+                            },
+                        ],
+                    }))}
             />
         </Wrapper>
     </Page>
