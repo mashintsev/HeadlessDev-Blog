@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: DevDigest for September 5
+title: DevDigest for September 5. Разбираемся в Redux
 date: '2018-09-05T09:47:39+03:00'
 description: |-
   Idiomatic Redux.
@@ -10,7 +10,6 @@ description: |-
 tags:
   - DevDigest
 ---
-Разбираемся в Redux.
 * [Idiomatic Redux](https://blog.isquaredsoftware.com/series/idiomatic-redux/)
 * [Redux best practices](https://medium.com/lexical-labs-engineering/redux-best-practices-64d59775802e)
 * [Structure your React-Redux project for scalability and maintainability](https://levelup.gitconnected.com/structure-your-react-redux-project-for-scalability-and-maintainability-618ad82e32b7)
