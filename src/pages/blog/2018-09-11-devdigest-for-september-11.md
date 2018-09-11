@@ -20,6 +20,6 @@ tags:
 * [You have to choose between Software Delivered on Time and Good Software](https://hackernoon.com/you-have-to-choose-between-software-delivered-on-time-and-good-software-44f4af1249b1)
 * [Spotify’s “This Is” playlists: the ultimate song analysis for 50 mainstream artists](https://towardsdatascience.com/spotifys-this-is-playlists-the-ultimate-song-analysis-for-50-mainstream-artists-c569e41f8118)
 * [Machine Learning @ Teads (part 2)](https://medium.com/teads-engineering/teads-machine-learning-stack-tooling-and-community-of-practice-9a20a980fdf)
-* [Good code practices with React and Redux](https://blog.scottlogic.com/2018/08/28/Good-code-practices-with-React-and-Redux.html)
+* [Keystone Real-time Stream Processing Platform](https://medium.com/netflix-techblog/keystone-real-time-stream-processing-platform-a3ee651812a)
 
 ![Cat Interview](http://s3.amazonaws.com/theoatmeal-img/comics/cat_interview/cat_interview.png)
