@@ -22,4 +22,4 @@ tags:
 * [Machine Learning @ Teads (part 2)](https://medium.com/teads-engineering/teads-machine-learning-stack-tooling-and-community-of-practice-9a20a980fdf)
 * [Keystone Real-time Stream Processing Platform](https://medium.com/netflix-techblog/keystone-real-time-stream-processing-platform-a3ee651812a)
 
-![Cat Interview](http://s3.amazonaws.com/theoatmeal-img/comics/cat_interview/cat_interview.png)
+![Cat Interview](https://s3.amazonaws.com/theoatmeal-img/comics/cat_interview/cat_interview.png)
