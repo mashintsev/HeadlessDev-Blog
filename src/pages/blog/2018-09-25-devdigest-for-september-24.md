@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: DevDigest for September 24
-date: '2018-09-24T22:15:06+03:00'
+date: '2018-09-25T22:15:06+03:00'
 description: >-
   The definitive Node.js handbook. Essential Cheat Sheets for Machine Learning
   and Deep Learning Engineers. How To Learn Data Science If You’re Broke. The
