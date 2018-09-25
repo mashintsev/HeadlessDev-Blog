@@ -9,6 +9,7 @@
     "@atlaskit/dynamic-table": "^10.0.7",
     "@atlaskit/page": "^8.0.3",
     "@atlaskit/page-header": "^6.0.3",
+    "@babel/core": "^7.1.0",
     "@babel/preset-flow": "^7.0.0",
     "@babel/runtime": "^7.0.0",
     "axios": "^0.18.0",
@@ -43,11 +44,14 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-emotion": "^9.2.10",
     "react-helmet": "^5.2.0",
+    "react-immutable-proptypes": "^2.1.0",
     "react-map-gl": "^3.3.4",
-    "slate": "^0.41.1",
+    "slate": "^0.32.0",
     "styled-components": "^3.4.1",
-    "uuid": "^3.2.1"
+    "uuid": "^3.2.1",
+    "webpack": "^4.20.0"
   },
   "keywords": [
     "gatsby"
@@ -55,7 +59,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "npm run develop",
+    "start": "yarn run develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
