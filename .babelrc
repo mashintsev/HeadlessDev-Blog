@@ -32,13 +32,6 @@
       }
     ],
     "@babel/plugin-syntax-dynamic-import",
-    "babel-plugin-macros",
-    [
-      "@babel/plugin-transform-runtime",
-      {
-        "helpers": true,
-        "regenerator": true
-      }
-    ]
+    "babel-plugin-macros"
   ]
 }
