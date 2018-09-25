@@ -24,3 +24,5 @@ tags:
 * [Putting the Power of Kafka into the Hands of Data Scientists](https://multithreaded.stitchfix.com/blog/2018/09/05/datahighway/)
 * [The Changing Face of ETL](https://www.confluent.io/blog/changing-face-etl)
 * [Time Series Data and MongoDB: Part 2 – Schema Design Best Practices](https://www.mongodb.com/blog/post/time-series-data-and-mongodb-part-2-schema-design-best-practices?utm_campaign=SF%20Data%20Weekly&utm_medium=email&utm_source=Revue%20newsletter)
+
+![Financial Chart](/img/step6.png)
