@@ -34,7 +34,7 @@ const TagsPage = ({
             </div>
         </section>
     </Layout>
-)
+);
 
 export default TagsPage
 
