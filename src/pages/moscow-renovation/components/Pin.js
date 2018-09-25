@@ -17,6 +17,7 @@ export default class Pin extends PureComponent {
                 src={building}
                 onClick={onClick}
                 style={{ ...pinStyle }}
+                alt="marker"
             />
         );
     }

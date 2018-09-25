@@ -38,7 +38,7 @@ class Index extends React.Component {
             bearing: 0,
             pitch: 0,
         },
-        popupInfo: null
+        popupInfo: null,
     };
 
     _updateViewport = (viewport) => {
@@ -94,7 +94,7 @@ class Index extends React.Component {
                             onViewportChange={this._updateViewport}
                             mapboxApiAccessToken={'pk.eyJ1IjoibWFzaGludHNldiIsImEiOiJjamtpM3VobGUwYnQxM3BwaDRqeWh3bnJ1In0.SoGp8UVhutW2fNZ-gCzMAg'}
                         >
-                            {data.allStroiMosRenovation.edges
+                            {data.allStroiMosRenovationJson.edges
                                 .map(item => item.node)
                                 .filter(node => node.id !== 'dummy' && node.coords !== null)
                                 .map(this._renderMarker)}
@@ -114,8 +114,8 @@ export default Index
 
 
 export const query = graphql`
-   query MoscowRenovation {
-      allStroiMosRenovation {
+   query {
+      allStroiMosRenovationJson {
         edges {
           node {
             id
