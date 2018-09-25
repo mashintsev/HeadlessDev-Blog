@@ -13,7 +13,10 @@
     "@babel/preset-flow": "^7.0.0",
     "@babel/runtime": "^7.0.0",
     "axios": "^0.18.0",
+    "babel-eslint": "^9.0.0",
+    "babel-loader": "^8.0.2",
     "babel-plugin-styled-components": "^1.7.1",
+    "babylon": "^6.18.0",
     "bulma": "^0.7.1",
     "gatsby": "^2.0.8",
     "gatsby-plugin-feed": "^2.0.5",
@@ -64,5 +67,9 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=v10.9.0",
+    "yarn": "^1.9.4"
   }
 }
