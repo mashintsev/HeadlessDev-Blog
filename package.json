@@ -10,6 +10,7 @@
     "@atlaskit/page": "^8.0.3",
     "@atlaskit/page-header": "^6.0.3",
     "@babel/preset-flow": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
     "axios": "^0.18.0",
     "babel-plugin-styled-components": "^1.7.1",
     "bulma": "^0.7.1",
