@@ -2,19 +2,19 @@
 # yarn lockfile v1
 
 
-"@atlaskit/analytics-next@^3.0.4":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-3.0.4.tgz#2808c8d46b76abc9aad6bea07d859dcbaa5ebcd6"
+"@atlaskit/analytics-next@^3.0.6":
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-3.0.8.tgz#0f9207ae46706f4d908dfe3668b702ca501a27ee"
   dependencies:
     prop-types "^15.5.10"
 
-"@atlaskit/button@^9.0.5":
-  version "9.0.5"
-  resolved "https://registry.yarnpkg.com/@atlaskit/button/-/button-9.0.5.tgz#cb359f0e042c542f80b33159fec63e33ba108ebb"
+"@atlaskit/button@^9.0.8":
+  version "9.0.10"
+  resolved "https://registry.yarnpkg.com/@atlaskit/button/-/button-9.0.10.tgz#d3da4607ab9bbf47a844d831ecc430920bb19715"
   dependencies:
-    "@atlaskit/analytics-next" "^3.0.4"
-    "@atlaskit/spinner" "9.0.5"
-    "@atlaskit/theme" "^5.1.3"
+    "@atlaskit/analytics-next" "^3.0.6"
+    "@atlaskit/spinner" "9.0.9"
+    "@atlaskit/theme" "^6.0.2"
     babel-runtime "^6.26.0"
 
 "@atlaskit/code@^8.0.3":
@@ -31,17 +31,16 @@
   dependencies:
     "@atlaskit/util-shared-styles" "^2.10.3"
 
-"@atlaskit/dynamic-table@^10.0.7":
-  version "10.0.7"
-  resolved "https://registry.yarnpkg.com/@atlaskit/dynamic-table/-/dynamic-table-10.0.7.tgz#47349ba5e40bc73d54fb4f56cb31a4db5a30989e"
+"@atlaskit/dynamic-table@^10.0.12":
+  version "10.0.12"
+  resolved "https://registry.yarnpkg.com/@atlaskit/dynamic-table/-/dynamic-table-10.0.12.tgz#d69b92b60ba1ea94e8a1a9df8eca1d032ea55135"
   dependencies:
-    "@atlaskit/analytics-next" "^3.0.4"
-    "@atlaskit/pagination" "^7.0.4"
-    "@atlaskit/spinner" "^9.0.5"
-    "@atlaskit/theme" "^5.1.3"
-    "@atlaskit/util-shared-styles" "^2.10.3"
+    "@atlaskit/analytics-next" "^3.0.6"
+    "@atlaskit/pagination" "^7.0.6"
+    "@atlaskit/spinner" "^9.0.9"
+    "@atlaskit/theme" "^6.0.2"
     prop-types "^15.5.10"
-    react-beautiful-dnd "^8.0.7"
+    react-beautiful-dnd "^9.0.0"
 
 "@atlaskit/page-header@^6.0.3":
   version "6.0.3"
@@ -53,29 +52,23 @@
   version "8.0.3"
   resolved "https://registry.yarnpkg.com/@atlaskit/page/-/page-8.0.3.tgz#9f7bad207dc49f1d1ea1498c5926290a6c415e19"
 
-"@atlaskit/pagination@^7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@atlaskit/pagination/-/pagination-7.0.4.tgz#40647cb3721c8bdacf40c1fc5b02430040b5cf09"
+"@atlaskit/pagination@^7.0.6":
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@atlaskit/pagination/-/pagination-7.0.6.tgz#8e060e49473b335b034ec590805f8d8f5d8099b7"
   dependencies:
-    "@atlaskit/analytics-next" "^3.0.4"
-    "@atlaskit/button" "^9.0.5"
+    "@atlaskit/analytics-next" "^3.0.6"
+    "@atlaskit/button" "^9.0.8"
     babel-runtime "^6.26.0"
 
-"@atlaskit/spinner@9.0.5", "@atlaskit/spinner@^9.0.5":
-  version "9.0.5"
-  resolved "https://registry.yarnpkg.com/@atlaskit/spinner/-/spinner-9.0.5.tgz#19f21a7d8346e7e63d9f0471a6df111fd1721204"
+"@atlaskit/spinner@9.0.9", "@atlaskit/spinner@^9.0.9":
+  version "9.0.9"
+  resolved "https://registry.yarnpkg.com/@atlaskit/spinner/-/spinner-9.0.9.tgz#9f854d0788f3ad1f8f353d6d6dbecc469f69d2ac"
   dependencies:
-    "@atlaskit/theme" "^5.1.3"
+    "@atlaskit/theme" "^6.0.3"
     babel-runtime "^6.26.0"
     react-transition-group "^2.2.1"
 
-"@atlaskit/theme@^5.1.3":
-  version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-5.1.3.tgz#2f856eb1b82e7003f0a2d5e6b203254c773f89b6"
-  dependencies:
-    prop-types "^15.5.10"
-
-"@atlaskit/theme@^6.0.2":
+"@atlaskit/theme@^6.0.2", "@atlaskit/theme@^6.0.3":
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-6.0.3.tgz#4c12ba4c05093c762d2c765e25230b0ae0c270aa"
   dependencies:
@@ -99,7 +92,7 @@
   dependencies:
     "@babel/highlight" "^7.0.0"
 
-"@babel/core@^7.0.0", "@babel/core@^7.1.0":
+"@babel/core@^7.0.0", "@babel/core@^7.0.0-beta.54":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.1.0.tgz#08958f1371179f62df6966d8a614003d11faeb04"
   dependencies:
@@ -337,7 +330,7 @@
     "@babel/helper-remap-async-to-generator" "^7.1.0"
     "@babel/plugin-syntax-async-generators" "^7.0.0"
 
-"@babel/plugin-proposal-class-properties@^7.0.0":
+"@babel/plugin-proposal-class-properties@^7.0.0", "@babel/plugin-proposal-class-properties@^7.0.0-beta.54":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.1.0.tgz#9af01856b1241db60ec8838d84691aa0bd1e8df4"
   dependencies:
@@ -531,7 +524,7 @@
     "@babel/helper-module-transforms" "^7.1.0"
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-transform-modules-commonjs@^7.1.0":
+"@babel/plugin-transform-modules-commonjs@^7.0.0-beta.54", "@babel/plugin-transform-modules-commonjs@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.1.0.tgz#0a9d86451cbbfb29bd15186306897c67f6f9a05c"
   dependencies:
@@ -608,7 +601,7 @@
   dependencies:
     regenerator-transform "^0.13.3"
 
-"@babel/plugin-transform-runtime@^7.0.0":
+"@babel/plugin-transform-runtime@^7.0.0", "@babel/plugin-transform-runtime@^7.0.0-beta.54":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.1.0.tgz#9f76920d42551bb577e2dc594df229b5f7624b63"
   dependencies:
@@ -664,7 +657,7 @@
     core-js "^2.5.7"
     regenerator-runtime "^0.11.1"
 
-"@babel/preset-env@^7.0.0":
+"@babel/preset-env@^7.0.0", "@babel/preset-env@^7.0.0-beta.54":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.1.0.tgz#e67ea5b0441cfeab1d6f41e9b5c79798800e8d11"
   dependencies:
@@ -710,14 +703,14 @@
     js-levenshtein "^1.1.3"
     semver "^5.3.0"
 
-"@babel/preset-flow@^7.0.0":
+"@babel/preset-flow@^7.0.0-beta.54":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/preset-flow/-/preset-flow-7.0.0.tgz#afd764835d9535ec63d8c7d4caf1c06457263da2"
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-transform-flow-strip-types" "^7.0.0"
 
-"@babel/preset-react@^7.0.0":
+"@babel/preset-react@^7.0.0", "@babel/preset-react@^7.0.0-beta.54":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/preset-react/-/preset-react-7.0.0.tgz#e86b4b3d99433c7b3e9e91747e2653958bc6b3c0"
   dependencies:
@@ -726,6 +719,13 @@
     "@babel/plugin-transform-react-jsx" "^7.0.0"
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
+
+"@babel/runtime-corejs2@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime-corejs2/-/runtime-corejs2-7.0.0.tgz#786711ee099c2c2af7875638866c1259eff30a8c"
+  dependencies:
+    core-js "^2.5.7"
+    regenerator-runtime "^0.12.0"
 
 "@babel/runtime@7.0.0", "@babel/runtime@^7.0.0":
   version "7.0.0"
@@ -1653,7 +1653,16 @@ babel-helpers@^6.24.1:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
-babel-loader@8.0.2, babel-loader@^8.0.2:
+babel-loader@8.0.0-beta.4:
+  version "8.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.0.0-beta.4.tgz#c3fab00696c385c70c04dbe486391f0eb996f345"
+  dependencies:
+    find-cache-dir "^1.0.0"
+    loader-utils "^1.0.2"
+    mkdirp "^0.5.1"
+    util.promisify "^1.0.0"
+
+babel-loader@^8.0.2:
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.0.2.tgz#2079b8ec1628284a929241da3d90f5b3de2a5ae5"
   dependencies:
@@ -4979,6 +4988,10 @@ flush-write-stream@^1.0.0:
   dependencies:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
+
+fn-name@~2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/fn-name/-/fn-name-2.0.1.tgz#5214d7537a4d06a4a301c0cc262feb84188002e7"
 
 focus-group@^0.3.1:
   version "0.3.1"
@@ -9867,7 +9880,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@15.6.1, prop-types@^15.0.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
+prop-types@^15.0.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
@@ -9881,6 +9894,10 @@ prop-types@^15.6.2:
   dependencies:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
+
+property-expr@^1.5.0:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/property-expr/-/property-expr-1.5.1.tgz#22e8706894a0c8e28d58735804f6ba3a3673314f"
 
 property-information@^3.0.0, property-information@^3.1.0:
   version "3.2.0"
@@ -10096,19 +10113,19 @@ react-autowhatever@^10.1.0:
     react-themeable "^1.1.0"
     section-iterator "^2.0.0"
 
-react-beautiful-dnd@^8.0.7:
-  version "8.0.7"
-  resolved "https://registry.yarnpkg.com/react-beautiful-dnd/-/react-beautiful-dnd-8.0.7.tgz#2cc7ba62bffe08d3dad862fd8f48204440901b43"
+react-beautiful-dnd@^9.0.0:
+  version "9.0.2"
+  resolved "https://registry.yarnpkg.com/react-beautiful-dnd/-/react-beautiful-dnd-9.0.2.tgz#9785a96c1f1385620aed840f0bc774c7455b3fd4"
   dependencies:
-    "@babel/runtime" "7.0.0-beta.54"
+    "@babel/runtime-corejs2" "^7.0.0"
     css-box-model "^1.0.0"
     memoize-one "^4.0.0"
-    prop-types "15.6.1"
+    prop-types "^15.6.1"
     raf-schd "^4.0.0"
     react-motion "^0.5.2"
     react-redux "^5.0.7"
     redux "^4.0.0"
-    tiny-invariant "^0.0.3"
+    tiny-invariant "^1.0.0"
 
 react-datetime@^2.11.0:
   version "2.14.0"
@@ -12207,6 +12224,10 @@ symbol-observable@^1.0.3, symbol-observable@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
+synchronous-promise@^2.0.5:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.6.tgz#de76e0ea2b3558c1e673942e47e714a930fa64aa"
+
 table@4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/table/-/table-4.0.2.tgz#a33447375391e766ad34d3486e6e2aedc84d2e36"
@@ -12395,9 +12416,9 @@ tiny-emitter@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.0.2.tgz#82d27468aca5ade8e5fd1e6d22b57dd43ebdfb7c"
 
-tiny-invariant@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-0.0.3.tgz#4c7283c950e290889e9e94f64d3586ec9156cf44"
+tiny-invariant@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.0.0.tgz#03f96fef4d3ba911f97ed467e1b88bca3d4d9d9f"
 
 tinycolor2@^1.1.2:
   version "1.4.1"
@@ -12488,6 +12509,10 @@ topo@2.x.x:
 toposort@^1.0.0:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/toposort/-/toposort-1.0.7.tgz#2e68442d9f64ec720b8cc89e6443ac6caa950029"
+
+toposort@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/toposort/-/toposort-2.0.2.tgz#ae21768175d1559d48bef35420b2f4962f09c330"
 
 touch@^2.0.1:
   version "2.0.2"
@@ -13655,6 +13680,17 @@ yauzl@^2.4.2:
 yeast@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
+
+yup@^0.26.6:
+  version "0.26.6"
+  resolved "https://registry.yarnpkg.com/yup/-/yup-0.26.6.tgz#07e216a1424861f17958fef1d4775c64ef985724"
+  dependencies:
+    "@babel/runtime" "7.0.0"
+    fn-name "~2.0.1"
+    lodash "^4.17.10"
+    property-expr "^1.5.0"
+    synchronous-promise "^2.0.5"
+    toposort "^2.0.2"
 
 yurnalist@^0.2.1:
   version "0.2.1"

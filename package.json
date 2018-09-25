@@ -6,12 +6,16 @@
   "dependencies": {
     "@atlaskit/code": "^8.0.3",
     "@atlaskit/css-reset": "^3.0.1",
-    "@atlaskit/dynamic-table": "^10.0.7",
+    "@atlaskit/dynamic-table": "^10.0.12",
     "@atlaskit/page": "^8.0.3",
     "@atlaskit/page-header": "^6.0.3",
-    "@babel/core": "^7.1.0",
-    "@babel/preset-flow": "^7.0.0",
-    "@babel/runtime": "^7.0.0",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "@babel/preset-flow": "^7.0.0-beta.54",
+    "@babel/preset-react": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.54",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.54",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.54",
     "axios": "^0.18.0",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.2",
@@ -54,7 +58,8 @@
     "slate": "^0.32.0",
     "styled-components": "^3.4.1",
     "uuid": "^3.2.1",
-    "webpack": "^4.20.0"
+    "webpack": "^4.20.0",
+    "yup": "^0.26.6"
   },
   "keywords": [
     "gatsby"
@@ -70,6 +75,5 @@
   },
   "engines": {
     "node": ">=v10.9.0",
-    "yarn": "^1.9.4"
   }
 }
