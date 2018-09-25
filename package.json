@@ -9,6 +9,7 @@
     "@atlaskit/dynamic-table": "^10.0.7",
     "@atlaskit/page": "^8.0.3",
     "@atlaskit/page-header": "^6.0.3",
+    "@babel/preset-flow": "^7.0.0",
     "axios": "^0.18.0",
     "babel-plugin-styled-components": "^1.7.1",
     "bulma": "^0.7.1",
@@ -17,6 +18,7 @@
     "gatsby-plugin-manifest": "^2.0.3",
     "gatsby-plugin-netlify": "^2.0.0",
     "gatsby-plugin-netlify-cms": "^3.0.3",
+    "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
     "gatsby-plugin-sharp": "^2.0.5",
@@ -56,10 +58,6 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "prettier": "^1.14.3"
   }
 }

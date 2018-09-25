@@ -5,7 +5,28 @@ module.exports = {
         siteUrl: `https://blog.headlessdev.com`,
     },
     plugins: [
-        'gatsby-plugin-styled-components',
+        {
+            resolve: 'gatsby-plugin-styled-components',
+            options: {
+                displayName: true,
+                preprocess: true,
+                minify: false,
+                transpileTemplateLiterals: false,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: "The HeadlessDev Blog",
+                short_name: "The HeadlessDev Blog",
+                start_url: "/",
+                "background_color": "#fff",
+                theme_color: "#fff",
+                display: "minimal-ui",
+                icon: "src/img/logo.png",
+            },
+        },
+        'gatsby-plugin-offline',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sass',
         {
