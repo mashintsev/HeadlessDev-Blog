@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import { graphql, Link } from 'gatsby'
 
 class TagRoute extends React.Component {
     render() {
@@ -71,4 +71,4 @@ export const tagPageQuery = graphql`
       }
     }
   }
-`
+`;

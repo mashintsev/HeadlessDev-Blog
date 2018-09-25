@@ -1,8 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Navbar from '../components/Navbar'
+import Navbar from './Navbar'
 import './all.sass'
 import '@atlaskit/css-reset';
 
@@ -18,16 +17,12 @@ const TemplateWrapper = ({ children }) => (
             <meta name="msapplication-TileColor" content="#da532c" />
             <meta name="theme-color" content="#ffffff" />
 
-            <meta name="p:domain_verify" content="c4c08ea61657758018e4a392781b7cfd"/>
+            <meta name="p:domain_verify" content="c4c08ea61657758018e4a392781b7cfd" />
         </Helmet>
 
         <Navbar />
-        <div>{children()}</div>
+        <div>{children}</div>
     </div>
-)
-
-TemplateWrapper.propTypes = {
-    children: PropTypes.func,
-}
+);
 
 export default TemplateWrapper

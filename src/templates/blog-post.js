@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import { graphql, Link } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
+import Layout from '../components/layout'
 
 export const BlogPostTemplate = ({
                                      content,
@@ -56,19 +57,21 @@ const BlogPost = ({ data }) => {
     const { markdownRemark: post } = data
 
     return (
-        <BlogPostTemplate
-            content={post.html}
-            contentComponent={HTMLContent}
-            description={post.frontmatter.description}
-            helmet={
-                <Helmet>
-                    <title>{`${post.frontmatter.title} | Blog`}</title>
-                    <meta name="description" content={post.frontmatter.description} />
-                </Helmet>
-            }
-            tags={post.frontmatter.tags}
-            title={post.frontmatter.title}
-        />
+        <Layout>
+            <BlogPostTemplate
+                content={post.html}
+                contentComponent={HTMLContent}
+                description={post.frontmatter.description}
+                helmet={
+                    <Helmet>
+                        <title>{`${post.frontmatter.title} | Blog`}</title>
+                        <meta name="description" content={post.frontmatter.description} />
+                    </Helmet>
+                }
+                tags={post.frontmatter.tags}
+                title={post.frontmatter.title}
+            />
+        </Layout>
     )
 }
 

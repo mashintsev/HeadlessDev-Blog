@@ -1,11 +1,14 @@
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 import React from 'react';
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import Page from '@atlaskit/page'
 import PageHeader from '@atlaskit/page-header';
 import MapGL, { Marker, NavigationControl, Popup } from 'react-map-gl';
+
+import Layout from '../../components/layout'
 import Pin from './components/Pin';
 import Info from './components/Info';
 
@@ -45,15 +48,15 @@ class Index extends React.Component {
     _renderMarker = (construction, index) => {
         const coords = JSON.parse(construction.coords);
         const popupInfo = {
-            longitude: coords[0],
-            latitude: coords[1],
+            longitude: coords && coords[0],
+            latitude: coords && coords[1],
             ...construction
         };
         return (
             <Marker
                 key={`marker-${index}`}
-                longitude={coords[0]}
-                latitude={coords[1]}
+                longitude={coords && coords[0]}
+                latitude={coords && coords[1]}
             >
                 <Pin size={20} onClick={() => this.setState({ popupInfo: popupInfo })} />
             </Marker>
@@ -77,30 +80,32 @@ class Index extends React.Component {
     render() {
         const { data } = this.props;
         return (
-            <Page>
-                <Helmet>
-                    <title>Стартовые площадки</title>
-                    <meta name="description" content="Карта со стартовыми объектам для реновации в Москве" />
-                </Helmet>
-                <Wrapper>
-                    <PageHeader>Стартовые площадки реновации в Москве</PageHeader>
-                    <MapGL
-                        {...this.state.viewport}
-                        mapStyle={'mapbox://styles/mapbox/streets-v9?optimize=true'}
-                        onViewportChange={this._updateViewport}
-                        mapboxApiAccessToken={'pk.eyJ1IjoibWFzaGludHNldiIsImEiOiJjamtpM3VobGUwYnQxM3BwaDRqeWh3bnJ1In0.SoGp8UVhutW2fNZ-gCzMAg'}
-                    >
-                        {data.allStroiMosRenovation.edges
-                            .map(item => item.node)
-                            .filter(node => node.id !== 'dummy')
-                            .map(this._renderMarker)}
-                        {this._renderPopup()}
-                        <div className="nav" style={navStyle}>
-                            <NavigationControl onViewportChange={this._updateViewport} />
-                        </div>
-                    </MapGL>
-                </Wrapper>
-            </Page>
+            <Layout>
+                <Page>
+                    <Helmet>
+                        <title>Стартовые площадки</title>
+                        <meta name="description" content="Карта со стартовыми объектам для реновации в Москве" />
+                    </Helmet>
+                    <Wrapper>
+                        <PageHeader>Стартовые площадки реновации в Москве</PageHeader>
+                        <MapGL
+                            {...this.state.viewport}
+                            mapStyle={'mapbox://styles/mapbox/streets-v9?optimize=true'}
+                            onViewportChange={this._updateViewport}
+                            mapboxApiAccessToken={'pk.eyJ1IjoibWFzaGludHNldiIsImEiOiJjamtpM3VobGUwYnQxM3BwaDRqeWh3bnJ1In0.SoGp8UVhutW2fNZ-gCzMAg'}
+                        >
+                            {data.allStroiMosRenovation.edges
+                                .map(item => item.node)
+                                .filter(node => node.id !== 'dummy' && node.coords !== null)
+                                .map(this._renderMarker)}
+                            {this._renderPopup()}
+                            <div className="nav" style={navStyle}>
+                                <NavigationControl onViewportChange={this._updateViewport} />
+                            </div>
+                        </MapGL>
+                    </Wrapper>
+                </Page>
+            </Layout>
         );
     }
 }
