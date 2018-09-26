@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: DevDigest for September 26
-date: 2018-09-25T11:56:48.324Z
+date: 2018-09-26T11:56:48.324Z
 description: >-
   Building a Complex Financial Chart with D3 and d3fc. 
 
