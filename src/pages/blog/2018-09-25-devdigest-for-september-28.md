@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: DevDigest for September 28
-date: 2018-09-28T12:51:16.403Z
+date: 2018-09-28T09:00:00.000Z
 description: |-
   Microservices. A definition of this new architectural term. 
   Flutter: Pros and Cons for Seamless Cross Platform Development.
