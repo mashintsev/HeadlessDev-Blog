@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: DevDigest for September 27
-date: 2018-09-25T12:28:50.954Z
+date: 2018-09-27T09:00:00.000Z
 description: |-
   Нейронные сети с нуля. Обзор курсов и статей на русском языке.
   Managing Software Dependency at Scale.
