@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: DevDigest for October 1
-date: 2018-09-30T21:00:00.000Z
+date: 2018-10-01T09:00:00.000Z
 description: |-
   90 New Features (and APIs) in JDK 11. 
   How browser rendering works — behind the scenes. 
