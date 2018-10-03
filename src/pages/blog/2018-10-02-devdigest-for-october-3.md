@@ -16,3 +16,5 @@ tags:
 * [Comparison of state management solutions for React](https://medium.com/dailyjs/comparison-of-state-management-solutions-for-react-2161a0b4af7b)
 * [Redefining Modern Data Architecture](https://www.teradata.com/Blogs/Modern-Data-Architecture?utm_campaign=SF%20Data%20Weekly&utm_medium=email&utm_source=Revue%20newsletter#/)
 * [The SQL vs NoSQL Difference: MySQL vs MongoDB](https://medium.com/xplenty-blog/the-sql-vs-nosql-difference-mysql-vs-mongodb-32c9980e67b2)
+
+![Go](/img/image42.png)
