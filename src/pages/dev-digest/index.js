@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 
-export default class IndexPage extends React.Component {
+export default class DevDigestIndexPage extends React.Component {
     render() {
         const { data } = this.props;
         const { edges: posts } = data.allMarkdownRemark;
@@ -47,7 +47,7 @@ export default class IndexPage extends React.Component {
     }
 }
 
-IndexPage.propTypes = {
+DevDigestIndexPage.propTypes = {
     data: PropTypes.shape({
         allMarkdownRemark: PropTypes.shape({
             edges: PropTypes.array,
@@ -56,10 +56,10 @@ IndexPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query IndexDevDigestQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "blog-post" }, tags: {nin: ["DevDigest", "Old posts"]} }}
+      filter: { frontmatter: { templateKey: { eq: "blog-post" }, tags: {eq:"DevDigest"} }}
     ) {
       edges {
         node {
