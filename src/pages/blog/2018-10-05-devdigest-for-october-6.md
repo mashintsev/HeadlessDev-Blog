@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: DevDigest for October 6
-date: 2018-10-06T09:00:00.000Z
+title: DevDigest for October 8
+date: 2018-10-08T09:00:00.000Z
 description: |-
   Boot yourself, Spring is coming (Часть 2)
   Как мы собрали 12-этажный стек технологий и не сошли с ума
