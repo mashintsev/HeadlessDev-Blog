@@ -14,5 +14,6 @@ tags:
 * [Resilient Systems in Banking](https://www.infoq.com/articles/resilient-banking-systems)
 * [Speaker Diarization — The Squad Way](https://hackernoon.com/speaker-diarization-the-squad-way-2205e0accbda)
 * [The 4 Convolutional Neural Network Models That Can Classify Your Fashion Images](https://towardsdatascience.com/the-4-convolutional-neural-network-models-that-can-classify-your-fashion-images-9fe7f3e5399d)
+* [Eureka, Zuul, and Cloud Configuration - Local Development](http://engineering.pivotal.io/post/local-eureka-zuul-cloud_config-with-spring/)
 
 ![Whale](/img/1_wxsrq6mxt__9yasluvabzw.jpeg)
