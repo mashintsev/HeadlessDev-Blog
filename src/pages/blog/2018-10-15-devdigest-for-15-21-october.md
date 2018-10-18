@@ -15,5 +15,9 @@ tags:
 * [Speaker Diarization — The Squad Way](https://hackernoon.com/speaker-diarization-the-squad-way-2205e0accbda)
 * [The 4 Convolutional Neural Network Models That Can Classify Your Fashion Images](https://towardsdatascience.com/the-4-convolutional-neural-network-models-that-can-classify-your-fashion-images-9fe7f3e5399d)
 * [Eureka, Zuul, and Cloud Configuration - Local Development](http://engineering.pivotal.io/post/local-eureka-zuul-cloud_config-with-spring/)
+* [Full Cycle Developers at Netflix — Operate What You Build](https://medium.com/netflix-techblog/full-cycle-developers-at-netflix-a08c31f83249)
+* [Современная веб-разработка: выбери себе приключение](https://habr.com/company/avito/blog/426851/)
+* [Build a Mobile App with React Native and Spring Boot](https://developer.okta.com/blog/2018/10/10/react-native-spring-boot-mobile-app)
+* []()
 
 ![Whale](/img/1_wxsrq6mxt__9yasluvabzw.jpeg)
