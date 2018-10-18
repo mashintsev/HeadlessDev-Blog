@@ -18,6 +18,8 @@ tags:
 * [Full Cycle Developers at Netflix — Operate What You Build](https://medium.com/netflix-techblog/full-cycle-developers-at-netflix-a08c31f83249)
 * [Современная веб-разработка: выбери себе приключение](https://habr.com/company/avito/blog/426851/)
 * [Build a Mobile App with React Native and Spring Boot](https://developer.okta.com/blog/2018/10/10/react-native-spring-boot-mobile-app)
-* []()
+* [Use Custom Packet Framing for Microservices Messaging](https://blog.codeship.com/use-custom-packet-framing-microservices-messaging/)
+* [Rendering “External Texture”: A Flutter Optimization Story](https://hackernoon.com/rendering-external-texture-an-flutter-optimization-by-alibaba-c5ed143af747)
+* [Strava’s New End-to-End Testing Setup](https://medium.com/strava-engineering/stravas-new-end-to-end-testing-setup-18b541727555)
 
 ![Whale](/img/1_wxsrq6mxt__9yasluvabzw.jpeg)
