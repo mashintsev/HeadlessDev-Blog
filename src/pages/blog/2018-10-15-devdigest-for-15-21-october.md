@@ -1,9 +1,36 @@
 ---
 templateKey: blog-post
-title: DevDigest for 15-21 October
+title: DevDigest for 15-19 October
 date: 2018-10-15T13:07:09.058Z
-description: |
+description: >-
   Why use Docker? 3 reasons from a development perspective. 
+
+  Typography Cheat Sheet [Infographic]. 
+
+  Batch and Streaming in the World of Data Science and Data Engineering. 
+
+  Building An Analytics Data Pipeline In Python. 
+
+  Resilient Systems in Banking. 
+
+  Speaker Diarization — The Squad Way. 
+
+  The 4 Convolutional Neural Network Models That Can Classify Your Fashion
+  Images. 
+
+  Eureka, Zuul, and Cloud Configuration - Local Development. 
+
+  Full Cycle Developers at Netflix — Operate What You Build. 
+
+  Современная веб-разработка: выбери себе приключение. 
+
+  Build a Mobile App with React Native and Spring Boot. 
+
+  Use Custom Packet Framing for Microservices Messaging. 
+
+  Rendering “External Texture”: A Flutter Optimization Story. 
+
+  Strava’s New End-to-End Testing Setup. 
 tags:
   - DevDigest
 ---
