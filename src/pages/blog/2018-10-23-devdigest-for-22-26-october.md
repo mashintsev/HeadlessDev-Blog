@@ -2,12 +2,26 @@
 templateKey: blog-post
 title: DevDigest for October 22-26
 date: 2018-10-26T09:08:35.702Z
-description: |+
-  Hexagonal Architecture: three principles and an implementation example. 
+description: |
+  Hexagonal Architecture: three principles and an implementation example.
 
-  Growing a Product Area at Zalando. 
+  Growing a Product Area at Zalando.
 
+  How to start automating your data pipelines with Airflow.
 
+  Event Driven 2.0.
+
+  Examples of what you can accomplish with Big Data.
+
+  Microservice Architecture at Medium.
+
+  Тестирование конфигурации для Java-разработчиков: практический опыт.
+
+  Как стать датасайнтистом, если тебе за 40 и ты не программист.
+
+  Modern background execution in Android.
+
+  8 Vital OAuth Flows and Powers.
 tags:
   - DevDigest
 ---
@@ -21,4 +35,3 @@ tags:
 * [Как стать датасайнтистом, если тебе за 40 и ты не программист](https://habr.com/company/qiwi/blog/427311/)
 * [Modern background execution in Android](https://android-developers.googleblog.com/2018/10/modern-background-execution-in-android.html)
 * [8 Vital OAuth Flows and Powers](https://nordicapis.com/8-types-of-oauth-flows-and-powers/)
-* []()
