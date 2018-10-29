@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: DevDigest for October 22-26
-date: 2018-10-23T09:08:35.702Z
+date: 2018-10-26T09:08:35.702Z
 description: |+
   Hexagonal Architecture: three principles and an implementation example. 
 
