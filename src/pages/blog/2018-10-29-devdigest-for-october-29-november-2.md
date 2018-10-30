@@ -8,5 +8,6 @@ tags:
 ---
 * [Optimizing React Performance with Selective Rendering](https://engineering.vena.io/2018/10/18/optimizing-react-rendering/)
 * [How to apply SOLID principles in React applications](https://blog.usejournal.com/how-to-apply-solid-principles-in-react-applications-6c964091a982)
+* [Обратная сторона микросервисов](https://mxsmirnov.com/2018/10/30/no-msa/)
 
 ![React SOLID](/img/1_6b-fhnljobcsdmrpnauvkw.png)
