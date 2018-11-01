@@ -11,5 +11,6 @@ tags:
 * [Обратная сторона микросервисов](https://mxsmirnov.com/2018/10/30/no-msa/)
 * [Управляем стоимостью проекта с Earned Value Management](https://habr.com/company/lanit/blog/428061/)
 * [12 factor apps revisited](https://convox.com/blog/twelve-factor-revisited/)
+* [Радар технологий: перечень языков, инструментов и платформ, которые прошли через руки Lamoda](https://habr.com/company/lamoda/blog/428411/)
 
-![React SOLID](/img/1_6b-fhnljobcsdmrpnauvkw.png)
+![Lamoda TechRadar](/img/631247aab11173978faf7c3f35cf4c74.png)
