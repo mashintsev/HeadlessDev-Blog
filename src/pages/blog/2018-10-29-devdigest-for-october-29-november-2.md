@@ -2,7 +2,19 @@
 templateKey: blog-post
 title: DevDigest for October 29 - November 2
 date: 2018-11-02T13:48:16.398Z
-description: Optimizing React Performance with Selective Rendering
+description: >-
+  Optimizing React Performance with Selective Rendering. 
+
+  How to apply SOLID principles in React applications. 
+
+  Обратная сторона микросервисов. 
+
+  Управляем стоимостью проекта с Earned Value Management. 
+
+  12 factor apps revisited. 
+
+  Радар технологий: перечень языков, инструментов и платформ, которые прошли
+  через руки Lamoda. 
 tags:
   - DevDigest
 ---
