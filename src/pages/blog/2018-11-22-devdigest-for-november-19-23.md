@@ -11,3 +11,4 @@ tags:
 * [Building & Managing a Remote Team: Best Practices from Doist’s Head of Marketing](https://blog.doist.com/building-and-managing-a-remote-team-2cd0ee4ccb5f)
 * [How Druid enables analytics at Airbnb](https://medium.com/airbnb-engineering/druid-airbnb-data-platform-601c312f2a4c)
 * [Engineering Growth Framework](https://medium.com/s/engineering-growth-framework)
+* [MONOLITH TO MICROSERVICES: 6 SIGNS YOUR SERVICE IS A JENGA TOWER](https://codingsans.com/blog/monolith-to-microservices?utm_source=Newsletter&utm_medium=43)
