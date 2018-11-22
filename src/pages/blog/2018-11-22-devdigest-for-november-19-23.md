@@ -1,0 +1,9 @@
+---
+templateKey: blog-post
+title: DevDigest for November 19 - 23
+date: 2018-11-23T12:40:56.725Z
+description: в
+tags:
+  - DevDigest
+---
+* [Apache Spark Introduction for Beginners](https://www.kdnuggets.com/2018/10/apache-spark-introduction-beginners.html?utm_campaign=SF%20Data%20Weekly&utm_medium=email&utm_source=Revue%20newsletter)
