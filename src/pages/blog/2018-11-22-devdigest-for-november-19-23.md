@@ -2,7 +2,19 @@
 templateKey: blog-post
 title: DevDigest for November 19 - 23
 date: 2018-11-23T12:40:56.725Z
-description: в
+description: >-
+  Apache Spark Introduction for Beginners. 
+
+  How to Work with Apache Kafka in Your Spring Boot Application. 
+
+  Building & Managing a Remote Team: Best Practices from Doist’s Head of
+  Marketing. 
+
+  How Druid enables analytics at Airbnb. 
+
+  Engineering Growth Framework. 
+
+  MONOLITH TO MICROSERVICES: 6 SIGNS YOUR SERVICE IS A JENGA TOWER.
 tags:
   - DevDigest
 ---
