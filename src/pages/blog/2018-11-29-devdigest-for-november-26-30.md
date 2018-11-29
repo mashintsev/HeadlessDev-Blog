@@ -14,3 +14,4 @@ tags:
 * [SQL at Scale with Apache Spark SQL and DataFrames — Concepts, Architecture and Examples](https://towardsdatascience.com/sql-at-scale-with-apache-spark-sql-and-dataframes-concepts-architecture-and-examples-c567853a702f)
 * [Understanding Production: What can you measure?](https://www.opsian.com/blog/understanding-production-what-can-you-measure/)
 * [An Introduction to Join Ordering](https://www.cockroachlabs.com/blog/join-ordering-pt1/)
+* [ATM Fraud Detection with Apache Kafka and KSQL](https://www.confluent.io/blog/atm-fraud-detection-apache-kafka-ksql)
