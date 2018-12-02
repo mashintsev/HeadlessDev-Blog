@@ -10,6 +10,8 @@ description: >
 tags:
   - DevDigest
 ---
+![null](/img/header-image_gs.png)
+
 * [Getting started with monitoring for developers](https://blog.bugsnag.com/the-monitoring-landscape/)
 * [SQL at Scale with Apache Spark SQL and DataFrames — Concepts, Architecture and Examples](https://towardsdatascience.com/sql-at-scale-with-apache-spark-sql-and-dataframes-concepts-architecture-and-examples-c567853a702f)
 * [Understanding Production: What can you measure?](https://www.opsian.com/blog/understanding-production-what-can-you-measure/)
