@@ -1,173 +1,217 @@
+require('dotenv').config();
+const config = require('./content/meta/config');
+const transformer = require('./src/utils/algolia');
+
+const query = `{
+  allMarkdownRemark( filter: { fields: { slug: { ne: null } } }) {
+    edges {
+      node {
+        objectID: fileAbsolutePath
+        fields {
+          slug
+        }
+        internal {
+          content
+        }
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}`;
+
+const queries = [
+    {
+        query,
+        transformer: ({ data }) => {
+            return data.allMarkdownRemark.edges.reduce(transformer, []);
+        }
+    }
+];
+
 module.exports = {
+    // pathPrefix: config.pathPrefix,
     siteMetadata: {
-        title: 'The HeadlessDev Blog',
-        description: `Blazing fast serverless personal blog`,
-        siteUrl: `https://blog.headlessdev.com`,
+        title: config.siteTitle,
+        description: config.siteDescription,
+        siteUrl: config.siteUrl,
+        algolia: {
+            appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : '',
+            searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+                ? process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+                : '',
+            indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : ''
+        },
+        facebook: {
+            appId: process.env.FB_APP_ID ? process.env.FB_APP_ID : ''
+        }
     },
     plugins: [
+        `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files
+        `gatsby-plugin-styled-jsx-postcss`, // as above
         {
-            resolve: 'gatsby-plugin-styled-components',
+            resolve: `gatsby-plugin-layout`,
             options: {
-                displayName: true,
-                preprocess: true,
-                minify: false,
-                transpileTemplateLiterals: false,
-            },
+                component: require.resolve(`./src/layouts/`)
+            }
         },
         {
-            resolve: `gatsby-plugin-manifest`,
+            resolve: `gatsby-plugin-algolia`,
             options: {
-                name: "The HeadlessDev Blog",
-                short_name: "The HeadlessDev Blog",
-                start_url: "/",
-                "background_color": "#fff",
-                theme_color: "#fff",
-                display: "minimal-ui",
-                icon: "src/img/logo.png",
-            },
+                appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : '',
+                apiKey: process.env.ALGOLIA_ADMIN_API_KEY ? process.env.ALGOLIA_ADMIN_API_KEY : '',
+                indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : '',
+                queries,
+                chunkSize: 10000 // default: 1000
+            }
         },
-        'gatsby-plugin-offline',
-        'gatsby-plugin-react-helmet',
-        'gatsby-plugin-sass',
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                path: `${__dirname}/src/pages`,
-                name: 'pages',
-            },
-        },
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                path: `${__dirname}/src/img`,
-                name: 'images',
-            },
-        },
-        `gatsby-transformer-json`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `./src/data/`,
-            },
-        },
-        {
-            resolve: 'gatsby-source-apiserver',
-            options: {
-                // Type prefix of entities from server
-                typePrefix: 'atlas__',
-
-                // The url, this should be the endpoint you are attempting to pull data from
-                url: `https://api.bitbucket.org/2.0/repositories/atlassian?sort=-updated_on&pagelen=100`,
-
-                method: 'get',
-                //
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-
-                // Request body
-                // data: {},
-
-                // Name of the data to be downloaded.  Will show in graphQL or be saved to a file
-                // using this name. i.e. posts.json
-                name: `repos`,
-
-                // Nested level of entities in repsonse object, example: `data.posts`
-                // entityLevel: `values`,
-
-                // Define schemaType to normalize blank values
-                // example:
-                // const postType = {
-                //   id: 1,
-                //   name: 'String',
-                //   published: true,
-                //   object: {a: 1, b: '2', c: false},
-                //   array: [{a: 1, b: '2', c: false}]
-                // }
-                schemaType: {},
-
-                // Simple authentication, if optional, set it null
-                auth: null,
-
-                // Optional payload key name if your api returns your payload in a different key
-                // Default will use the full response from the http request of the url
-                payloadKey: `values`,
-
-                // Optionally save the JSON data to a file locally
-                // Default is false
-                // localSave: true,
-
-                //  Required folder path where the data should be saved if using localSave option
-                //  This folder must already exist
-                // path: `${__dirname}/src/data/auth/`,
-
-                // Optionally include some output when building
-                // Default is false
-                verboseOutput: false, // For debugging purposes
-
-                // Optionally skip creating nodes in graphQL.  Use this if you only want
-                // The data to be saved locally
-                // Default is false
-                // skipCreateNode: true, // skip import to graphQL, only use if localSave is all you want
+                name: `images`,
+                path: `${__dirname}/src/images/`
             }
         },
         {
-            resolve: 'gatsby-source-apiserver',
+            resolve: `gatsby-source-filesystem`,
             options: {
-                typePrefix: 'atlas__',
-                url: `https://api.bitbucket.org/2.0/repositories/atlassianlabs?sort=-updated_on&pagelen=100`,
-                method: 'get',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                name: `labsRepos`,
-                auth: null,
-                payloadKey: `values`,
+                path: `${__dirname}/content/posts/`,
+                name: 'posts'
             }
         },
-        // {
-        //     resolve: 'gatsby-source-apiserver',
-        //     options: {
-        //         typePrefix: 'stroi_mos__',
-        //         url: `https://stroi.mos.ru/api/construction?search=&adm_unit=&func_type%5B%5D=renov-bld&func_type%5B%5D=renov-1719&func_type%5B%5D=renov-2023&finish_year=2025`,
-        //         method: 'get',
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         },
-        //         name: `renovation`,
-        //         auth: null,
-        //     }
-        // },
-        'gatsby-plugin-sharp',
-        'gatsby-transformer-sharp',
         {
-            resolve: 'gatsby-transformer-remark',
+            resolve: `gatsby-source-filesystem`,
             options: {
-                plugins: [],
-            },
+                path: `${__dirname}/content/pages/`,
+                name: 'pages'
+            }
         },
         {
-            resolve: 'gatsby-plugin-netlify-cms',
+            resolve: `gatsby-source-filesystem`,
             options: {
-                modulePath: `${__dirname}/src/cms/cms.js`,
-            },
+                name: `parts`,
+                path: `${__dirname}/content/parts/`
+            }
         },
         {
-            resolve: `gatsby-plugin-sitemap`
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    `gatsby-plugin-sharp`,
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 800,
+                            backgroundColor: 'transparent'
+                        }
+                    },
+                    {
+                        resolve: `gatsby-remark-responsive-iframe`,
+                        options: {
+                            wrapperStyle: `margin-bottom: 2em`
+                        }
+                    },
+                    `gatsby-remark-prismjs`,
+                    `gatsby-remark-copy-linked-files`,
+                    `gatsby-remark-smartypants`,
+                    {
+                        resolve: 'gatsby-remark-emojis',
+                        options: {
+                            // Deactivate the plugin globally (default: true)
+                            active: true,
+                            // Add a custom css class
+                            class: 'emoji-icon',
+                            // Select the size (available size: 16, 24, 32, 64)
+                            size: 64,
+                            // Add custom styles
+                            styles: {
+                                display: 'inline',
+                                margin: '0',
+                                'margin-top': '1px',
+                                position: 'relative',
+                                top: '5px',
+                                width: '25px'
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-catch-links`,
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: config.manifestName,
+                short_name: config.manifestShortName,
+                start_url: config.manifestStartUrl,
+                background_color: config.manifestBackgroundColor,
+                theme_color: config.manifestThemeColor,
+                display: config.manifestDisplay,
+                icons: [
+                    {
+                        src: '/icons/icon-48x48.png',
+                        sizes: '48x48',
+                        type: 'image/png'
+                    },
+                    {
+                        src: '/icons/icon-96x96.png',
+                        sizes: '96x96',
+                        type: 'image/png'
+                    },
+                    {
+                        src: '/icons/icon-144x144.png',
+                        sizes: '144x144',
+                        type: 'image/png'
+                    },
+                    {
+                        src: '/icons/icon-192x192.png',
+                        sizes: '192x192',
+                        type: 'image/png'
+                    },
+                    {
+                        src: '/icons/icon-256x256.png',
+                        sizes: '256x256',
+                        type: 'image/png'
+                    },
+                    {
+                        src: '/icons/icon-384x384.png',
+                        sizes: '384x384',
+                        type: 'image/png'
+                    },
+                    {
+                        src: '/icons/icon-512x512.png',
+                        sizes: '512x512',
+                        type: 'image/png'
+                    }
+                ]
+            }
+        },
+        `gatsby-plugin-offline`,
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: process.env.GOOGLE_ANALYTICS_ID
+            }
         },
         {
             resolve: `gatsby-plugin-feed`,
             options: {
-                query: `{
-                  site {
-                    siteMetadata {
-                      title
-                      description
-                      siteUrl
-                      site_url: siteUrl
-                    }
-                  }
-                }`,
+                query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
                 feeds: [
                     {
                         serialize: ({ query: { site, allMarkdownRemark } }) => {
@@ -176,34 +220,46 @@ module.exports = {
                                     description: edge.node.excerpt,
                                     url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                                     guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                                    custom_elements: [{ 'content:encoded': edge.node.html }],
-                                })
-                            })
+                                    custom_elements: [{ 'content:encoded': edge.node.html }]
+                                });
+                            });
                         },
-                        query: `{
-                              allMarkdownRemark(
-                                limit: 1000,
-                                sort: { order: DESC, fields: [frontmatter___date] },
-                                filter: { frontmatter: { templateKey: { eq: "blog-post" }, tags: {ne:"Old posts"} }}
-                              ) {
-                                edges {
-                                  node {
-                                    excerpt
-                                    html
-                                    fields { slug }
-                                    frontmatter {
-                                      title
-                                      date
-                                    }
-                                  }
-                                }
-                              }
-                            }`,
-                        output: '/rss.xml',
-                    },
-                ],
-            },
+                        query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [fields___prefix] },
+                  filter: { fields: { slug: { ne: null } } }
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields {
+                        slug
+                        prefix
+                      }
+                      frontmatter {
+                        title
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+                        output: '/rss.xml'
+                    }
+                ]
+            }
         },
-        'gatsby-plugin-netlify', // make sure to keep it last in the array
-    ],
-}
+        {
+            resolve: `gatsby-plugin-sitemap`
+        },
+        {
+            resolve: 'gatsby-plugin-react-svg',
+            options: {
+                include: /svg-icons/
+            }
+        }
+    ]
+};
