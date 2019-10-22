@@ -3,7 +3,7 @@ title: 21 Product Frameworks
 description: >
   List of 21 Product Frameworks
 category: "Product"
-cover: DjSf7-bUwAAUIsY.jpg.jpg
+cover: DjSf7-bUwAAUIsY.jpg
 author: Ivan Mashintsev
 ---
 
