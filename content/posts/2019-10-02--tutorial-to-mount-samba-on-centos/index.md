@@ -2,7 +2,7 @@
 title: How to Mount SMB Shares on CentOS 7
 description: >
   In this tutorial, you will learn how to mount SMB shares on CentOS 7. You will be guided through the process for both desktop and server installations of the operating system.
-category: "HowTo, Linux"
+category: HowTo
 cover: cover.jpg
 author: Ivan Mashintsev
 ---
